@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.Appointment;
 
 import javaproj.Methods.IdGenerator.IdGenerator;
@@ -16,10 +12,6 @@ import javaproj.Repository.AppointmentRepository;
 import java.time.format.DateTimeFormatter;
 import javaproj.Methods.User.DoctorService;
 
-/**
- *
- * @author NICK
- */
 public class StaffAppointment extends AppointmentBase{
     private final IdGenerator generator = new FileIdGenerator();
     private static final DateTimeFormatter HHmm = DateTimeFormatter.ofPattern("HH:mm");

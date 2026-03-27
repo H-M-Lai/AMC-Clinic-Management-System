@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Staff;
 
 import java.time.LocalDate;
@@ -23,10 +19,6 @@ import javax.swing.table.DefaultTableModel;
 import javaproj.Methods.Payment.StaffPayment;
 import javaproj.Repository.PaymentRepository;
 
-/**
- *
- * @author NICK
- */
 public class PaymentRecordPanel extends javax.swing.JPanel {
 
     private PanelController controller;

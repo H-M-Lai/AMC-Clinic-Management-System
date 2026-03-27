@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package javaproj.GUI.Manager;
 
 import java.util.List;
 import javaproj.Model.Appointment;
 
-/**
- *
- * @author mayvi
- */
 public class appointmentDetails extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(appointmentDetails.class.getName());

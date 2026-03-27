@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Customer;
 
-/**
- *
- * @author user
- */
 
 import java.util.*;
 import javaproj.GUI.Credentials.Session;

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.User;
 
 import javaproj.Methods.IdGenerator.IdGenerator;
@@ -12,10 +8,6 @@ import javaproj.Model.Role.User;
 import javaproj.Methods.Parser.ManagerParser;
 import javaproj.Repository.UserRepository;
 
-/**
- *
- * @author NICK
- */
 public class ManagerService extends AbstractUserService<Manager> {
 
     private final IdGenerator generator = new FileIdGenerator();

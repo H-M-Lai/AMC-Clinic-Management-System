@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Customer;
 import javaproj.GUI.Credentials.Session;
 import javaproj.Methods.Feedback.CustomerFeedback;
@@ -11,10 +7,6 @@ import javaproj.Methods.User.CustomerService;
 import javaproj.Utils.PanelController;
 import javaproj.Utils.Utils;
 import javax.swing.JOptionPane;
-/**
- *
- * @author user
- */
 public class ProvideCommentPanel extends javax.swing.JPanel {
     private PanelController controller;
     private final FeedbackRepository feedbackRepo = new FeedbackRepository();

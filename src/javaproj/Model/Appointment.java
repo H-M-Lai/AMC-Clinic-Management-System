@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Model;
 
 import java.util.*;
 
-/**
- *
- * @author NICK
- */
 public class Appointment {
     private String appointmentId,staffId,customerId,doctorId,date,time,note;
     private Status status;

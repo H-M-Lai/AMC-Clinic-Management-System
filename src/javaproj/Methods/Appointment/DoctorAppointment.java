@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.Appointment;
 
 import java.time.LocalDate;
@@ -10,10 +6,6 @@ import java.util.*;
 import javaproj.Model.Appointment;
 import javaproj.Repository.AppointmentRepository;
 
-/**
- *
- * @author NICK
- */
 public class DoctorAppointment extends AppointmentBase {
     public DoctorAppointment(AppointmentRepository repo){ 
         super(repo); 

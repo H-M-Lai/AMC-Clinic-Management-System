@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.Parser;
 
 import javaproj.Model.Feedback;
 
-/**
- *
- * @author mayvi
- */
 public class FeedbackParser extends LineParser<Feedback>{
     
     @Override

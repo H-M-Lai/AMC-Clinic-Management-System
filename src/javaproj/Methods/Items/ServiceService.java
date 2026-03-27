@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.Items;
 
 import java.util.*;
@@ -11,10 +7,6 @@ import javaproj.Repository.ItemRepository;
 import javaproj.Utils.ReturnList;
 import javaproj.Utils.Utils;
 
-/**
- *
- * @author NICK
- */
 public class ServiceService {
     private final ItemRepository<Service> repo;
 

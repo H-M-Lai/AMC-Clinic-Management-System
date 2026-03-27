@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package javaproj.GUI.Common;
 
 import javaproj.Methods.User.SuperManagerService;
@@ -13,10 +9,6 @@ import javaproj.GUI.Credentials.Session;
 import javaproj.Model.Role.*;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author NICK
- */
 public class ChangePassword extends javax.swing.JFrame {
     
     private final CustomerService customerSvc = new CustomerService();

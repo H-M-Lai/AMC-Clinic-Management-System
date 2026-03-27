@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package javaproj.GUI.Manager;
 
 import java.util.List;
@@ -14,10 +10,6 @@ import javaproj.Methods.User.StaffService;
 import javaproj.Utils.ReturnList;
 import javaproj.Utils.Utils;
 import javax.swing.*;
-/**
- *
- * @author mayvi
- */
 public class addUser extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(addUser.class.getName());

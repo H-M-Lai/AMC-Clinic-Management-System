@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Repository;
 
 import java.util.*;
@@ -10,10 +6,6 @@ import javaproj.Methods.Parser.ChargeItemParser;
 import javaproj.Methods.Parser.LineParser;
 import javaproj.Utils.Utils;
 
-/**
- *
- * @author NICK
- */
 public class ChargeItemsRepository implements Repository<ChargeItems>{
     private final String filePath;
     private final LineParser<ChargeItems> parser;

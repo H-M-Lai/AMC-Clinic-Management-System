@@ -1,14 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Model;
 
 
-/**
- *
- * @author NICK
- */
 public class Payment {
     private String paymentId,appointmentId,date,time;
     private PaymentMethod paymentMethod;

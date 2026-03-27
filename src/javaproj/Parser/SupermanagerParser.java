@@ -1,14 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.Parser;
 
 import javaproj.Model.Role.Supermanager;
-/**
- *
- * @author mayvi
- */
 public class SupermanagerParser extends LineParser<Supermanager>{
     @Override
     public Supermanager parse(String line) {

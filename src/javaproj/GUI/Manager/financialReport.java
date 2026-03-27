@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Manager;
 
 import java.awt.BorderLayout;
@@ -22,10 +18,6 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
 import org.jfree.chart.*;
-/**
- *
- * @author mayvi
- */
 public class financialReport extends javax.swing.JPanel {
 
     private PanelController controller;

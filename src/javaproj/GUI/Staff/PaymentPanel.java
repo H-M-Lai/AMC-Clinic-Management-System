@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Staff;
 
 import java.awt.Dialog;
@@ -26,10 +22,6 @@ import javaproj.Methods.User.CustomerService;
 import javaproj.Utils.PanelController;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-/**
- *
- * @author NICK
- */
 public class PaymentPanel extends javax.swing.JPanel {
     
     PDFInvoiceGenerator pdf = new PDFInvoiceGenerator();

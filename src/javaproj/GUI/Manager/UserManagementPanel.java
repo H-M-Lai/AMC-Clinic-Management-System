@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Manager;
 
 import javaproj.Methods.User.CustomerService;
@@ -18,10 +14,6 @@ import javaproj.Model.Role.Supermanager;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
-/**
- *
- * @author mayvi
- */
 public class UserManagementPanel extends javax.swing.JPanel {
     
     private final CustomerService customerSvc = new CustomerService();

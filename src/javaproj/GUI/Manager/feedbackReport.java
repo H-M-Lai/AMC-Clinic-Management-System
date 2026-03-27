@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Manager;
 
 import java.awt.*;
@@ -12,10 +8,6 @@ import javax.swing.*;
 import javax.swing.border.*;
 import org.jfree.chart.*;
 
-/**
- *
- * @author mayvi
- */
 public class feedbackReport extends javax.swing.JPanel {
     FeedbackReportService feedbackReportService = new FeedbackReportService();
     private PanelController controller;

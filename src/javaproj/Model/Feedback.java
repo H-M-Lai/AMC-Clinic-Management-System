@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Model;
 
 import java.util.*;
 import javaproj.Methods.Parser.FeedbackParser;
 import javaproj.Utils.Utils;
 
-/**
- *
- * @author NICK
- */
 public class Feedback {
     private String feedbackId,appointmentId,userType,rating,comment1,comment2;
 

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Manager;
 
 import java.util.Collections;
@@ -16,10 +12,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.swing.*;
 import javax.swing.table.*;
-/**
- *
- * @author mayvi
- */
 public class FeedbacknComment extends javax.swing.JPanel {
     // Service to get all feedback from storage
     private PanelController controller;

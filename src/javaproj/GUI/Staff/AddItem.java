@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package javaproj.GUI.Staff;
 
 import java.util.*;
@@ -10,10 +6,6 @@ import javaproj.Methods.Items.ServiceService;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
-/**
- *
- * @author NICK
- */
 public class AddItem extends javax.swing.JFrame {
     private final MedicationService medicationService = new MedicationService();
     private final ServiceService serviceService = new ServiceService();

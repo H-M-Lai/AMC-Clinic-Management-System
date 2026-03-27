@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.User;
 
 import java.util.ArrayList;
@@ -13,10 +9,6 @@ import javaproj.Model.Role.User;
 import javaproj.Methods.Parser.SupermanagerParser;
 import javaproj.Repository.UserRepository;
 
-/**
- *
- * @author NICK
- */
 public class SuperManagerService extends AbstractUserService<Supermanager> {
 
     private final ManagerService managerService  = new ManagerService();

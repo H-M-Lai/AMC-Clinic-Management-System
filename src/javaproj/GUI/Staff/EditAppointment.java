@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package javaproj.GUI.Staff;
 
 import javaproj.Model.Role.Doctor;
@@ -20,10 +16,6 @@ import javaproj.Methods.Appointment.StaffAppointment;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-/**
- *
- * @author NICK
- */
 public class EditAppointment extends javax.swing.JFrame {
     private boolean isLoading = false;
     private String currentId = null;

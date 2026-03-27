@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.Payment;
 
 import java.time.LocalDateTime;
@@ -10,10 +6,6 @@ import javaproj.Model.Payment;
 import javaproj.Repository.PaymentRepository;
 import javaproj.Utils.Utils;
 
-/**
- *
- * @author NICK
- */
 public class DoctorPayment {
     private final PaymentRepository payRepo;
 

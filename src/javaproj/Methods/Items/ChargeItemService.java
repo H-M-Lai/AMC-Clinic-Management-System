@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.Items;
 
 import java.util.ArrayList;
@@ -13,10 +9,6 @@ import javaproj.Model.Service;
 import javaproj.Repository.ChargeItemsRepository;
 import javaproj.Utils.Utils;
 
-/**
- *
- * @author NICK
- */
 public class ChargeItemService {
 
     private final ChargeItemsRepository repo;

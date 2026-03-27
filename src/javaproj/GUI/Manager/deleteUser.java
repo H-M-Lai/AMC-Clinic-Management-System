@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package javaproj.GUI.Manager;
 
 import java.util.List;
@@ -16,10 +12,6 @@ import javaproj.Methods.User.CustomerService;
 import javaproj.Methods.User.DoctorService;
 import javaproj.Methods.User.ManagerService;
 import javaproj.Methods.User.StaffService;
-/**
- *
- * @author mayvi
- */
 public class deleteUser extends javax.swing.JFrame {
     
     private String selectedRole;

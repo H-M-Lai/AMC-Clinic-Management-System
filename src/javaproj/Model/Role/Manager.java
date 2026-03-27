@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Model.Role;
 
 import java.util.ArrayList;
 import java.util.List;
 //import javaproj.Services.UserService;
 
-/**
- *
- * @author NICK
- */
 public class Manager extends User{
     //UserService userService = new UserService();
     public Manager(String systemId, 

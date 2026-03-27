@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package javaproj.GUI.Staff;
 
 import javaproj.Model.Role.Customer;
 import javaproj.Methods.User.CheckDuplicates;
 import javaproj.Methods.User.CustomerService;
 
-/**
- *
- * @author NICK
- */
 public class CreateAndEditCustomer extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CreateAndEditCustomer.class.getName());
     private String id = null;

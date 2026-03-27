@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.User;
 
 import java.util.*;
@@ -9,10 +5,6 @@ import java.util.stream.Collectors;
 import javaproj.Model.Role.User;
 import javaproj.Repository.UserRepository;
 
-/**
- *
- * @author NICK
- */
 public abstract class AbstractUserService<T extends User> {
     protected final UserRepository repo;
 

@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Model.Role;
 
 import java.util.*;
 //import javaproj.Services.UserService;
 
-/**
- *
- * @author mayvi
- */
 public class Supermanager extends Manager{
     //UserService userService = new UserService();
     public Supermanager(String systemId, String name, String identityNumber, String address, String phone, String email, String password) {

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Repository;
 
 import java.util.*;
@@ -10,10 +6,6 @@ import javaproj.Model.Feedback;
 import javaproj.Methods.Parser.FeedbackParser;
 import javaproj.Utils.*;
 
-/**
- *
- * @author NICK
- */
 public class FeedbackRepository implements Repository<Feedback>{
     private final String filename;
     private final FeedbackParser parser;

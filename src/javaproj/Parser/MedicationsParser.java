@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.Parser;
 
 import javaproj.Model.Medication;
 
-/**
- *
- * @author NICK
- */
 public class MedicationsParser extends LineParser<Medication> {
     public Medication parse(String line){
         String[] tokens = splitline(line);

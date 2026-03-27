@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Common;
 
 import javaproj.GUI.Credentials.Session;
@@ -11,10 +7,6 @@ import javaproj.Utils.Utils;
 import static javaproj.Utils.Utils.setProfileIcon;
 import javax.swing.*;
 
-/**
- *
- * @author NICK
- */
 public class ProfilePanel extends javax.swing.JPanel {
 
     /**

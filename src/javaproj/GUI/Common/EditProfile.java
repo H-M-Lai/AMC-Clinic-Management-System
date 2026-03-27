@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package javaproj.GUI.Common;
 
 import javaproj.Methods.User.SuperManagerService;
@@ -19,10 +15,6 @@ import javaproj.Utils.Utils;
 import javax.swing.*;
 //import javaproj.Services.UserService;
 
-/**
- *
- * @author mayvi
- */
 public class EditProfile extends javax.swing.JFrame {
     
     private final CustomerService customerSvc = new CustomerService();

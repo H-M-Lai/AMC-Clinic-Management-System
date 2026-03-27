@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Customer;
 
 import javax.swing.*;
@@ -15,10 +11,6 @@ import javaproj.Repository.AppointmentRepository;
 import javaproj.Methods.Appointment.CustomerAppointment;
 import javaproj.Methods.User.DoctorService;
 import javaproj.Model.Role.Doctor;
-/**
- *
- * @author user
- */
 public class CancelAppointmentPanel extends javax.swing.JPanel {
     private PanelController controller;
     private final AppointmentRepository apptRepo = new AppointmentRepository();

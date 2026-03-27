@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Repository;
 
 import java.util.*;
@@ -11,10 +7,6 @@ import javaproj.Model.Payment;
 import javaproj.Methods.Parser.PaymentParser;
 import javaproj.Utils.*;
 
-/**
- *
- * @author NICK
- */
 public class PaymentRepository implements Repository<Payment>{
     private final String filePath;
     private final PaymentParser parser;

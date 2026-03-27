@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package javaproj.GUI.Manager;
 
 import javaproj.Model.Appointment;
@@ -22,10 +18,6 @@ import javaproj.Methods.User.CustomerService;
 import javaproj.Methods.User.DoctorService;
 import javaproj.Methods.User.StaffService;
 
-/**
- *
- * @author mayvi
- */
 public class appointmentMonitoring extends javax.swing.JPanel {
     private PanelController controller;
     

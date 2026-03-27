@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.GUI.Common;
 
 import java.awt.Graphics2D;
@@ -12,10 +8,6 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
-/**
- *
- * @author NICK
- */
 public class UploadProfilePic {
         // Resize method
     public static BufferedImage resizeImage(BufferedImage originalImage, int targetWidth, int targetHeight) {

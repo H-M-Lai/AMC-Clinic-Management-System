@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaproj.Methods.User;
 
 import java.util.ArrayList;
@@ -9,10 +5,6 @@ import java.util.List;
 import java.util.Objects;
 import javaproj.Model.Role.User;
 
-/**
- *
- * @author NICK
- */
 public final class CheckDuplicates {
     private final CustomerService customerService;
     private final DoctorService   doctorService;
