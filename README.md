@@ -61,7 +61,3 @@ This public repository does not include personal-looking demo records, generated
 - The project uses local text files instead of a database.
 - Some lookup files such as specialties and service types are included.
 - `reports/`, `invoices/`, and `profilePic/` are ignored because they are runtime-generated or local assets.
-
-## Author
-
-Academic Java Swing desktop project.
