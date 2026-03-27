@@ -1,0 +1,11 @@
+medicationId,medicationName,indication,unitPrice,therapeuticClass
+X0001,Lisinopril 10mg Tablet,Hypertension,12.5,ACE Inhibitor
+X0002,Sertraline 50mg Tablet,Depression and Anxiety,28.75,SSRI
+X0003,Gabapentin 300mg Capsule,Neuropathic Pain,24.9,Anticonvulsant
+X0004,Hydrocortisone 1% Cream,Eczema and Dermatitis,8.5,Topical Corticosteroid
+X0005,Ibuprofen 200mg Tablet,Musculoskeletal Pain,6.25,NSAID
+X0006,Amoxicillin 500mg Capsule,Bacterial Infection,15.3,Penicillin
+X0007,Metformin 500mg Tablet,Type 2 Diabetes,10.2,Biguanide
+X0008,Cetirizine 10mg Tablet,Allergic Rhinitis,7.8,Antihistamine
+X0009,Omeprazole 20mg Capsule,GERD,13.4,PPI
+X0010,Atorvastatin 20mg Tablet,Hyperlipidemia,22.0,Statin

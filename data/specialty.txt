@@ -1,0 +1,18 @@
+Cardiology
+Pediatrics
+Neurology
+Dermatology
+Orthopedics
+Psychiatry
+Ophthalmology
+ENT
+OB-GYN
+Urology
+Gastroenterology
+Oncology
+Radiology
+Anesthesiology
+Emergency Medicine
+Family Medicine
+General Surgery
+Plastic Surgery

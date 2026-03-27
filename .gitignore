@@ -1,0 +1,48 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# NetBeans build output
+/nbproject/private/
+/build/
+/dist/
+
+# Keep project dependencies under version control
+!/lib/**
+
+# Generated files and local-only assets
+/reports/
+/invoices/
+/profilePic/
+
+# Exclude personal-looking sample records before publishing
+/data/Customer.txt
+/data/doctor.txt
+/data/staff.txt
+/data/manager.txt
+/data/supermanager.txt
+/data/appointment.txt
+/data/payment.txt
+/data/feedback.txt
+/data/chargeItems.txt

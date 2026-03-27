@@ -1,0 +1,40 @@
+ACE Inhibitor
+SSRI
+Anticonvulsant
+Topical Corticosteroid
+NSAID
+Penicillin Antibiotic
+Beta Blocker Ophthalmic
+Nasal Corticosteroid
+Vitamin B
+Alpha Blocker
+Proton Pump Inhibitor
+Anthracycline Chemotherapy
+Radiographic Contrast
+IV Anesthetic
+Sympathomimetic
+Statin
+Cephalosporin Antibiotic
+Local Anesthetic
+Topical Retinoid
+Analgesic
+Prostaglandin Analog
+Nasal Decongestant
+Prenatal Supplement
+PDE5 Inhibitor
+Biguanide
+Platinum Chemotherapy
+Benzodiazepine
+Bronchodilator
+Beta Blocker
+Glycopeptide Antibiotic
+Neurotoxin
+Triptan
+Antifungal
+Corticosteroid
+Alpha Agonist Ophthalmic
+Antihistamine
+Iron Supplement
+H2 Receptor Antagonist
+Taxane Chemotherapy
+MRI Contrast Agent

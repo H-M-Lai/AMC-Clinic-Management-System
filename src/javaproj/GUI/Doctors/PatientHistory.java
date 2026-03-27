@@ -1,0 +1,297 @@
+package javaproj.GUI.Doctors;
+
+import javaproj.Methods.Parser.CustomerParser;
+import javaproj.Methods.Parser.AppointmentParser;
+import javaproj.Model.*;
+import javaproj.Model.Role.*;
+import javaproj.Utils.*;
+
+import javax.swing.table.DefaultTableModel;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import java.util.*;
+
+public class PatientHistory extends javax.swing.JPanel {
+
+    private Doctor doctor;
+    private PanelController controller;
+    private List<Appointment> appointments;
+    private List<Customer> customers;
+    
+    private static final Map<String, PatientHistoryDetail> openWindows = new HashMap<>();
+
+    
+    String[] columnNames = {"Customer ID", "Name", "Total Visits"};
+    private DefaultTableModel model = new DefaultTableModel(columnNames, 0){
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false; // all cells uneditable
+        }
+    };
+    
+    // Keep original data in memory for filtering
+    private List<Object[]> allpatientRows = new ArrayList<>();
+    
+    public PatientHistory(Doctor doctor, PanelController controller) {
+        this.controller = controller;
+        this.doctor = doctor;
+        initComponents();
+        tbPatients.setModel(model); 
+        loadPatients();
+        setupFilters();
+    }
+    
+    private void setupFilters() {
+        // live search
+        txtSearch.getDocument().addDocumentListener(new DocumentListener() {
+            public void insertUpdate(DocumentEvent e) {applyFilters();}
+            public void removeUpdate(DocumentEvent e) {applyFilters();}
+            public void changedUpdate(DocumentEvent e) {applyFilters();}
+        });
+
+        // combo visits
+        cmbVisits.addActionListener(e -> applyFilters());
+
+        // reset btn
+        btnReset.addActionListener(e -> {
+            txtSearch.setText("");
+            cmbVisits.setSelectedIndex(0);
+            loadPatients();
+        });
+    }
+    
+    private void loadPatients() {
+        // read files once and build canonical patientRows
+        appointments = Utils.readFile("data/appointment.txt", new AppointmentParser());
+        customers = Utils.readFile("data/customer.txt", new CustomerParser());
+
+        // filter this doctor's appointments
+        List<Appointment> doctorAppts = new ArrayList<Appointment>();
+        for (Appointment a : appointments) {
+            if (a.getDoctorId().equals(doctor.getSystemId())) {
+                doctorAppts.add(a);
+            }
+        }
+
+        // count visits per customer
+        Map<String, Integer> visits = new LinkedHashMap<String, Integer>();
+        for (Appointment a : doctorAppts) {
+            String custId = a.getCustomerId();
+            Integer cur = visits.get(custId);
+            if (cur == null) {
+                visits.put(custId, 1);
+            } else {
+                visits.put(custId, cur + 1);
+            }
+        }
+
+        // Build patientRows
+        allpatientRows.clear();
+        for (String custId : visits.keySet()) {
+            String name = "Unknown";
+            for (Customer c : customers) {
+                if (c.getSystemId().equals(custId)) {
+                    name = c.getName();
+                    break;
+                }
+            }
+            Integer count = visits.get(custId);
+            allpatientRows.add(new Object[]{custId, name, count});
+        }
+        model.setRowCount(0);
+        for (Object[] row : allpatientRows) {
+            model.addRow(new Object[] { row[0], row[1], row[2] });
+        }
+    }
+
+    // Apply search + combo visits against allpatientRows and update table model
+    private void applyFilters() {
+        String keyword = txtSearch.getText().trim().toLowerCase();
+        String filterOption = (String) cmbVisits.getSelectedItem();
+
+        model.setRowCount(0); // clear
+
+        for (Object[] row : allpatientRows) {
+            String custId = ((String) row[0]).toLowerCase();
+            String name = ((String) row[1]).toLowerCase();
+            int visits = ((Integer) row[2]).intValue();
+
+            boolean matchesSearch = keyword.isEmpty()
+                    || custId.contains(keyword)
+                    || name.contains(keyword);
+
+            boolean matchesCombo = true;
+            if ("Frequent Visitors (>=5)".equals(filterOption)) {
+                matchesCombo = visits > 4;
+            } else if ("First Time Only".equals(filterOption)) {
+                matchesCombo = visits == 1;
+            } // else "All Patients" -> true
+
+            if (matchesSearch && matchesCombo) {
+                model.addRow(new Object[]{row[0], row[1], row[2]});
+            }
+        }
+    }
+    
+    
+    
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        cmbVisits = new javax.swing.JComboBox<>();
+        btnReset = new javax.swing.JButton();
+        txtSearch = new javax.swing.JTextField();
+        lblSearch = new javax.swing.JLabel();
+        lblVisits = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbPatients = new javax.swing.JTable();
+        lblTitleHistory = new javax.swing.JLabel();
+        backBtn = new javax.swing.JButton();
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        cmbVisits.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Patients", "Frequent Visitors (>=5)", "First Time Only" }));
+
+        btnReset.setText("Reset");
+
+        lblSearch.setText("Search (Name/ID):");
+
+        lblVisits.setText("Visits:");
+
+        tbPatients.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {},
+            new String [] {
+                "Customer ID", "Name", "Total Visits"
+            }
+        ));
+        tbPatients.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbPatientsMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tbPatients);
+
+        lblTitleHistory.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTitleHistory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitleHistory.setText("Patient History");
+
+        backBtn.setText("Back");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backBtn)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(lblSearch)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                            .addComponent(lblVisits)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(cmbVisits, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btnReset))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+                        .addComponent(lblTitleHistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(20, 20, 20))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(backBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblTitleHistory)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmbVisits, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReset)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSearch)
+                    .addComponent(lblVisits))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void tbPatientsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbPatientsMouseClicked
+        if (evt.getClickCount() == 2 && tbPatients.getSelectedRow() != -1) {
+            int row = tbPatients.getSelectedRow();
+            String customerId = (String) model.getValueAt(row, 0);
+            
+            // Check if window already open
+            if (openWindows.containsKey(customerId)) {
+                PatientHistoryDetail existing = openWindows.get(customerId);
+                existing.toFront(); // bring to front
+                existing.requestFocus();
+            } else {
+                PatientHistoryDetail frame = new PatientHistoryDetail(doctor, customerId);
+                openWindows.put(customerId, frame);
+
+                // When window closes, remove from map
+                frame.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosed(java.awt.event.WindowEvent e) {
+                        openWindows.remove(customerId);
+                    }
+
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        openWindows.remove(customerId);
+                    }
+                });
+
+                frame.setVisible(true);
+            }    
+        }
+    }//GEN-LAST:event_tbPatientsMouseClicked
+
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        // TODO add your handling code here:
+        controller.show("home");
+    }//GEN-LAST:event_backBtnActionPerformed
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backBtn;
+    private javax.swing.JButton btnReset;
+    private javax.swing.JComboBox<String> cmbVisits;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblSearch;
+    private javax.swing.JLabel lblTitleHistory;
+    private javax.swing.JLabel lblVisits;
+    private javax.swing.JTable tbPatients;
+    private javax.swing.JTextField txtSearch;
+    // End of variables declaration//GEN-END:variables
+}

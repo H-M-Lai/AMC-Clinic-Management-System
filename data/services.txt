@@ -1,0 +1,11 @@
+serviceId,serviceName,description,unitPrice,serviceType
+V0001,Basic Consultation,Basic Consultation service,85.0,Consultation
+V0002,Follow-up Consultation,Follow-up Consultation service,65.0,Consultation
+V0003,New Patient Consultation,New Patient Consultation service,125.0,Consultation
+V0004,Annual Physical Exam,Annual Physical Exam service,225.0,Consultation
+V0005,Diabetes Management,Diabetes Management service,165.0,Consultation
+V0006,Allergy Testing,Allergy Testing service,95.0,Diagnostic
+V0007,Vaccination,Vaccination service,45.0,Preventative
+V0008,Wound Dressing,Wound Dressing service,55.0,Treatment
+V0009,ECG Test,ECG Test service,120.0,Diagnostic
+V0010,Blood Test,Blood Test service,70.0,Diagnostic

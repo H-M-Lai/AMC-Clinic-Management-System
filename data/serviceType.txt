@@ -1,0 +1,6 @@
+Consultation
+Diagnostic
+Procedure
+Surgery
+Therapeutic
+Imaging
